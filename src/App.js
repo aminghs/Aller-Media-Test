@@ -36,8 +36,9 @@ function App() {
         columns: row.columns.filter(column => extractImageIdFromUrl(column.imageUrl) !== imageId),
       }
     });
-    setRows(newRows);
-    alert("ok");
+    setTimeout(() => {
+      setRows(newRows);
+    }, 2000); 
   }
 
   function handleEdit (e) {
