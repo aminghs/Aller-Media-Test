@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+The provided URL returns JSON, which contains an array of objects representing
+rows. Each row has a field, columns, which contains an array of objects representing
+article previews. In effect, the provided JSON is a simplified representation of the
+Dagbladet front page. We would like you to create a React application that makes a
+request to the provided URL, and renders the rows and articles in accordance with
+the JSON response.
+Each article should have an edit button which swaps out the title with an input field
+that allows the user to edit and save the title. In addition to the edit button, there
+should be a delete button that deletes the article. When an article is deleted, show a
+prompt for a few seconds that allows the user to restore the last deleted article.
+Backend URL: https://storage.googleapis.com/aller-structure-task/test_data.json
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Additional Details
 
-## Available Scripts
+The following is an example of a row that appears in the response. The width is
+based on a 12-column grid. A width of 5, therefore, implies that this article should be
+5/12ths of the body width. The other article has a width of 7, meaning it takes up the
+remaining 7/12ths of the body width. All rows will have a width that sums to 12.
+For imageUrl, the height and width of the image can be modified by adding
+&height=X and/or &width=X to the URL.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The other fields are hopefully self-explanatory.
