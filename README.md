@@ -1,3 +1,5 @@
+Test details:
+
 The provided URL returns JSON, which contains an array of objects representing
 rows. Each row has a field, columns, which contains an array of objects representing
 article previews. In effect, the provided JSON is a simplified representation of the
