@@ -31,7 +31,7 @@ const Table = () => {
   const fetchData = async () => {
     const response = await fetch(url);
     const data = await response.json();
-    const rows = await data[0];
+    const rows =  data[0];
 
     const modifiedData = [...rows];
     for (let singleRow of rows){
@@ -71,18 +71,21 @@ const Table = () => {
   }
 
   function handleEdit () {
+    let found = false;
     const listToModify = [...rows];
     for(let singleRow of listToModify){
       if(singleRow.columns ){
         for(let singleColumn of singleRow.columns){
           if(singleColumn.id === editId){
+            found = true;
             singleColumn.title = editText;
             break;
           }
         }
+      } if (found) {
+        break;
       }
     }
-    setEditText('');
     setEditId(null);
     setRows(listToModify);
   }
